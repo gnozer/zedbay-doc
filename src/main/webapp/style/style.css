@@ -59,8 +59,14 @@ p {
 	border-color:#00bfa5;
 }
 
-nav {
+.topNav {
 	background-color:#00bfa5;
+}
+
+.articleNav, .sectionNav {
+	box-shadow:none;
+	-webkit-box-shadow:none;
+	background:none;
 }
 
 #nav-mobile {
@@ -79,7 +85,7 @@ blockquote {
 	padding-bottom:5px;
 }
 
-#content {
+.content {
 	position:absolute;
 	top:66px;
 	left:0px;
