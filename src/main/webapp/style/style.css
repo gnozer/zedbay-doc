@@ -57,7 +57,7 @@ nav .button-collapse {
 	min-height:0;
 }
 
-.imp, .side-nav > li > a {
+.imp, #slide-out > li > a {
 	font-weight: bold;
 	color:#00bfa5;
 }
