@@ -40,8 +40,11 @@ public class DocFilter implements Filter {
 	}
 	
 	public Lang getLanguageFromURI(String uri) {
+		if(uri != null && !uri.isEmpty() && uri.split("/").length >=1) {
+			return Lang.getLang(uri.split("/")[1]);
+		}
 		
-		return Lang.getLang(uri.split("/")[1]);
+		return  Lang.getDefaultLang();
 		
 	}
 
