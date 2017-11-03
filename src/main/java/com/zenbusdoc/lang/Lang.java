@@ -9,7 +9,7 @@ public enum Lang {
 	FR,
 	EN
 	;
-
+	
 	public String toString(){
 		switch(this){
 		case FR:

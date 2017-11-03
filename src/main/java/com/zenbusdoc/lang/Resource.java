@@ -12,7 +12,6 @@ public enum Resource {
 			"Zenbus Traveller",
 			"Zenbus Voyageur");
 	
-	
 	public String english;
 	public String french;
 	

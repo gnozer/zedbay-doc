@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class DocFilter implements Filter {
 
-
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub
