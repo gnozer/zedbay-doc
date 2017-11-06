@@ -3,10 +3,10 @@
 <nav class="sectionNav hide-on-med-and-down">
 	<h2 class="sideTitle">Zenbus Driver</h2>
 	<ul id="nav-mobile" class="side-nav fixed">
-		<li class="item-driver-installation"><a id="driverInstallation">1. Installation</a></li>
-		<li class="item-driver-configuration"><a id="driverConfiguration">2. Configuration</a></li>
-		<li class="item-driver-faq"><a id="driverFaq">3. FAQ</a></li>
-		<li class="item-driver-tutorial"><a id="driverTutorial">4. Tutorial</a></li>
+		<li class="item-driver-installation"><a class="driverInstallation">1. Installation</a></li>
+		<li class="item-driver-configuration"><a class="driverConfiguration">2. Configuration</a></li>
+		<li class="item-driver-faq"><a class="driverFaq">3. FAQ</a></li>
+		<li class="item-driver-tutorial"><a class="driverTutorial">4. Tutorial</a></li>
 	</ul>
 </nav>
 <article id="installation" class="article">
@@ -15,9 +15,9 @@
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"
-				onclick="parent.window.focus();window.print();"><i
+				onclick="window.print();"><i
 				class="material-icons">local_printshop</i></a>
-			<div class="section scrollspy">
+			<div id="driver-installation-cat1" class="section scrollspy">
 				<h1>1. Installation</h1>
 
 				<div class="row valign-wrapper">
@@ -31,14 +31,14 @@
 					Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 				</blockquote>
 			</div>
-			<div id="wifi_disabled" class="section scrollspy">
+			<div id="driver-installation-cat2" class="section scrollspy">
 				<h2>Aenean nec tempus ex.</h2>
 				<p>
 					Pellentesque suscipit ipsum eget diam ullamcorper, sodales lacinia tellus rhoncus. Duis auctor tortor non mauris fermentum, non cursus risus pretium. Donec suscipit nisi nec sollicitudin consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut diam nisl, vestibulum eu elit non, suscipit tristique tortor. Nulla venenatis velit nec lacus gravida porttitor. Nulla facilisi. Nullam tincidunt dui id metus tincidunt, nec imperdiet dui mattis. Pellentesque eget lacus feugiat, tincidunt lorem fringilla, dignissim velit. Nam et nibh viverra, finibus leo ut, bibendum ex. Curabitur in arcu sem. Praesent venenatis sit amet tortor quis rhoncus. Nullam interdum arcu quis libero vestibulum egestas. Pellentesque ut orci nec dolor imperdiet facilisis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 				</p>
 				
 			</div>
-			<div id="localization" class="section scrollspy">
+			<div id="driver-installation-cat3" class="section scrollspy">
 				<h2>Pellentesque posuere </h2>
 				<p>
 					Sed suscipit sapien augue, non porttitor tortor egestas ut. Vestibulum vel nisl augue. Integer auctor, ligula sit amet aliquam blandit, dui dolor efficitur est, id mollis risus tellus vulputate ligula. Sed accumsan varius elit quis tincidunt. Vestibulum vel sapien et urna viverra bibendum. Duis vel risus tortor. Curabitur viverra urna consectetur odio tincidunt feugiat. Vivamus vulputate odio ut quam accumsan lacinia vel in sapien. Aenean eu quam nisl.
@@ -46,7 +46,7 @@
 				
 				<blockquote>Fusce imperdiet, augue vel maximus pharetra</blockquote>
 			</div>
-			<div id="precision_wifi" class="section scrollspy">
+			<div id="driver-installation-cat4" class="section scrollspy">
 				<h2>Mauris pellentesque enim eu</h2>
 				<p>
 					In dictum pretium mauris, eu feugiat felis porta quis. Etiam lobortis lorem ut urna dictum consequat. Mauris at eleifend justo. Nam auctor mauris quis vestibulum condimentum. Integer ac velit ac ipsum fermentum placerat eget consectetur augue. Phasellus pulvinar purus dolor, sit amet tempor urna laoreet vitae. Sed vitae diam elementum, lobortis mauris non, scelerisque arcu. Nam quis porttitor est. Nam tempor nibh sit amet sagittis dapibus. Donec ut elit magna.
@@ -54,11 +54,11 @@
 			</div>
 		</div>
 		<div class="col hide-on-small-only m3 l2 articleNav">
-			<ul id="toc" class="section table-of-contents">
-				<li><a href="#config">Introduction</a></li>
-				<li><a href="#wifi_disabled">Aenean nec tempus ex.</a></li>
-				<li><a href="#localization">Pellentesque posuere</a></li>
-				<li><a href="#precision_wifi">Mauris pellentesque enim eu</a></li>
+			<ul class="section table-of-contents">
+				<li><a href="#driver-installation-cat1">Introduction</a></li>
+				<li><a href="#driver-installation-cat2">Aenean nec tempus ex.</a></li>
+				<li><a href="#driver-installation-cat3">Pellentesque posuere</a></li>
+				<li><a href="#driver-installation-cat4">Mauris pellentesque enim eu</a></li>
 			</ul>
 		</div>
 	</div>
@@ -69,9 +69,9 @@
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"
-				onclick="parent.window.focus();window.print();"><i
+				onclick="window.print();"><i
 				class="material-icons">local_printshop</i></a>
-			<div class="section scrollspy">
+			<div id="driver-configuration-cat1" class="section scrollspy">
 				<h1>2. Procédure de configuration</h1>
 
 				<div class="row valign-wrapper">
@@ -96,7 +96,7 @@
 					de la composition d'un numéro.
 				</blockquote>
 			</div>
-			<div id="wifi_disabled" class="section scrollspy">
+			<div id="driver-configuration-cat2" class="section scrollspy">
 				<h2>Etape 1. Désactivation du Wifi</h2>
 				<p>
 					Il est nécessaire de <span class="imp2">désactiver</span> le Wifi
@@ -127,7 +127,7 @@
 						<p>A activer</p></li>
 				</ul>
 			</div>
-			<div id="localization" class="section scrollspy">
+			<div id="driver-configuration-cat3" class="section scrollspy">
 				<h2>Etape 2. Localisation</h2>
 				<p>
 					Sous Android, vous pouvez paramétrer localement le mode de
@@ -144,7 +144,7 @@
 					uniquement" / ... peuvent varier en fonction de la version
 					d'Android.</blockquote>
 			</div>
-			<div id="precision_wifi" class="section scrollspy">
+			<div id="driver-configuration-cat4" class="section scrollspy">
 				<h2>Etape 3. Amélioration précision</h2>
 				<p>
 					Sur les dernières versions d'Android, le paramètre "Analyse Wi-Fi"
@@ -161,11 +161,11 @@
 			</div>
 		</div>
 		<div class="col hide-on-small-only m3 l2 articleNav">
-			<ul id="toc" class="section table-of-contents">
-				<li><a href="#config">Introduction</a></li>
-				<li><a href="#wifi_disabled">Wifi</a></li>
-				<li><a href="#localization">Localisation</a></li>
-				<li><a href="#precision_wifi">Amélioration précision</a></li>
+			<ul class="section table-of-contents">
+				<li><a href="#driver-configuration-cat1">Introduction</a></li>
+				<li><a href="#driver-configuration-cat2">Wifi</a></li>
+				<li><a href="#driver-configuration-cat3">Localisation</a></li>
+				<li><a href="#driver-configuration-cat4">Amélioration précision</a></li>
 			</ul>
 		</div>
 	</div>
@@ -178,7 +178,7 @@
 				class="btn-floating btn-large waves-effect waves-light printButton"
 				onclick="parent.window.focus();window.print();"><i
 				class="material-icons">local_printshop</i></a>
-			<div class="section scrollspy">
+			<div id="driver-faq-cat1" class="section scrollspy">
 				<h1>3. FAQ</h1>
 
 				<div class="row valign-wrapper">
@@ -192,14 +192,14 @@
 					Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 				</blockquote>
 			</div>
-			<div id="wifi_disabled" class="section scrollspy">
+			<div id="driver-faq-cat2" class="section scrollspy">
 				<h2>Aenean nec tempus ex.</h2>
 				<p>
 					Pellentesque suscipit ipsum eget diam ullamcorper, sodales lacinia tellus rhoncus. Duis auctor tortor non mauris fermentum, non cursus risus pretium. Donec suscipit nisi nec sollicitudin consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut diam nisl, vestibulum eu elit non, suscipit tristique tortor. Nulla venenatis velit nec lacus gravida porttitor. Nulla facilisi. Nullam tincidunt dui id metus tincidunt, nec imperdiet dui mattis. Pellentesque eget lacus feugiat, tincidunt lorem fringilla, dignissim velit. Nam et nibh viverra, finibus leo ut, bibendum ex. Curabitur in arcu sem. Praesent venenatis sit amet tortor quis rhoncus. Nullam interdum arcu quis libero vestibulum egestas. Pellentesque ut orci nec dolor imperdiet facilisis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 				</p>
 				
 			</div>
-			<div id="localization" class="section scrollspy">
+			<div id="driver-faq-cat3" class="section scrollspy">
 				<h2>Pellentesque posuere </h2>
 				<p>
 					Sed suscipit sapien augue, non porttitor tortor egestas ut. Vestibulum vel nisl augue. Integer auctor, ligula sit amet aliquam blandit, dui dolor efficitur est, id mollis risus tellus vulputate ligula. Sed accumsan varius elit quis tincidunt. Vestibulum vel sapien et urna viverra bibendum. Duis vel risus tortor. Curabitur viverra urna consectetur odio tincidunt feugiat. Vivamus vulputate odio ut quam accumsan lacinia vel in sapien. Aenean eu quam nisl.
@@ -207,7 +207,7 @@
 				
 				<blockquote>Fusce imperdiet, augue vel maximus pharetra</blockquote>
 			</div>
-			<div id="precision_wifi" class="section scrollspy">
+			<div id="driver-faq-cat4" class="section scrollspy">
 				<h2>Mauris pellentesque enim eu</h2>
 				<p>
 					In dictum pretium mauris, eu feugiat felis porta quis. Etiam lobortis lorem ut urna dictum consequat. Mauris at eleifend justo. Nam auctor mauris quis vestibulum condimentum. Integer ac velit ac ipsum fermentum placerat eget consectetur augue. Phasellus pulvinar purus dolor, sit amet tempor urna laoreet vitae. Sed vitae diam elementum, lobortis mauris non, scelerisque arcu. Nam quis porttitor est. Nam tempor nibh sit amet sagittis dapibus. Donec ut elit magna.
@@ -215,11 +215,11 @@
 			</div>
 		</div>
 		<div class="col hide-on-small-only m3 l2 articleNav">
-			<ul id="toc" class="section table-of-contents">
-				<li><a href="#config">Introduction</a></li>
-				<li><a href="#wifi_disabled">Aenean nec tempus ex.</a></li>
-				<li><a href="#localization">Pellentesque posuere</a></li>
-				<li><a href="#precision_wifi">Mauris pellentesque enim eu</a></li>
+			<ul class="section table-of-contents">
+				<li><a href="#driver-faq-cat1">Introduction</a></li>
+				<li><a href="#driver-faq-cat2">Aenean nec tempus ex.</a></li>
+				<li><a href="#driver-faq-cat3">Pellentesque posuere</a></li>
+				<li><a href="#driver-faq-cat4">Mauris pellentesque enim eu</a></li>
 			</ul>
 		</div>
 	</div>
@@ -232,7 +232,7 @@
 				class="btn-floating btn-large waves-effect waves-light printButton"
 				onclick="parent.window.focus();window.print();"><i
 				class="material-icons">local_printshop</i></a>
-			<div class="section scrollspy">
+			<div id="driver-tutorial-cat1" class="section scrollspy">
 				<h1>4. Tuto</h1>
 
 				<div class="row valign-wrapper">
@@ -246,14 +246,14 @@
 					Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 				</blockquote>
 			</div>
-			<div id="wifi_disabled" class="section scrollspy">
+			<div id="driver-tutorial-cat2" class="section scrollspy">
 				<h2>Aenean nec tempus ex.</h2>
 				<p>
 					Pellentesque suscipit ipsum eget diam ullamcorper, sodales lacinia tellus rhoncus. Duis auctor tortor non mauris fermentum, non cursus risus pretium. Donec suscipit nisi nec sollicitudin consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut diam nisl, vestibulum eu elit non, suscipit tristique tortor. Nulla venenatis velit nec lacus gravida porttitor. Nulla facilisi. Nullam tincidunt dui id metus tincidunt, nec imperdiet dui mattis. Pellentesque eget lacus feugiat, tincidunt lorem fringilla, dignissim velit. Nam et nibh viverra, finibus leo ut, bibendum ex. Curabitur in arcu sem. Praesent venenatis sit amet tortor quis rhoncus. Nullam interdum arcu quis libero vestibulum egestas. Pellentesque ut orci nec dolor imperdiet facilisis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 				</p>
 				
 			</div>
-			<div id="localization" class="section scrollspy">
+			<div id="driver-tutorial-cat3" class="section scrollspy">
 				<h2>Pellentesque posuere </h2>
 				<p>
 					Sed suscipit sapien augue, non porttitor tortor egestas ut. Vestibulum vel nisl augue. Integer auctor, ligula sit amet aliquam blandit, dui dolor efficitur est, id mollis risus tellus vulputate ligula. Sed accumsan varius elit quis tincidunt. Vestibulum vel sapien et urna viverra bibendum. Duis vel risus tortor. Curabitur viverra urna consectetur odio tincidunt feugiat. Vivamus vulputate odio ut quam accumsan lacinia vel in sapien. Aenean eu quam nisl.
@@ -261,7 +261,7 @@
 				
 				<blockquote>Fusce imperdiet, augue vel maximus pharetra</blockquote>
 			</div>
-			<div id="precision_wifi" class="section scrollspy">
+			<div id="driver-tutorial-cat4" class="section scrollspy">
 				<h2>Mauris pellentesque enim eu</h2>
 				<p>
 					In dictum pretium mauris, eu feugiat felis porta quis. Etiam lobortis lorem ut urna dictum consequat. Mauris at eleifend justo. Nam auctor mauris quis vestibulum condimentum. Integer ac velit ac ipsum fermentum placerat eget consectetur augue. Phasellus pulvinar purus dolor, sit amet tempor urna laoreet vitae. Sed vitae diam elementum, lobortis mauris non, scelerisque arcu. Nam quis porttitor est. Nam tempor nibh sit amet sagittis dapibus. Donec ut elit magna.
@@ -269,54 +269,13 @@
 			</div>
 		</div>
 		<div class="col hide-on-small-only m3 l2 articleNav">
-			<ul id="toc" class="section table-of-contents">
-				<li><a href="#config">Introduction</a></li>
-				<li><a href="#wifi_disabled">Aenean nec tempus ex.</a></li>
-				<li><a href="#localization">Pellentesque posuere</a></li>
-				<li><a href="#precision_wifi">Mauris pellentesque enim eu</a></li>
+			<ul class="section table-of-contents">
+				<li><a href="#driver-tutorial-cat1">Introduction</a></li>
+				<li><a href="#driver-tutorial-cat2">Aenean nec tempus ex.</a></li>
+				<li><a href="#driver-tutorial-cat3">Pellentesque posuere</a></li>
+				<li><a href="#driver-tutorial-cat4">Mauris pellentesque enim eu</a></li>
 			</ul>
 		</div>
 	</div>
 </article>
 <footer id="emptyFooter"></footer>
-<script type="application/javascript">
-		
-		
-		 	function fixmetotop() {
-			  var fixmeTop = $('.table-of-contents').offset().top;
-			  $(window).scroll(function() {
-				 var currentScroll = $(window).scrollTop(),
-				 currentScroll = currentScroll + 15,
-				 actualBottom = $('#bodybox').offset().top + $('#bodybox').outerHeight(true),
-				 heightSideNav = $('.table-of-contents').outerHeight(true);
-				 if (currentScroll >= fixmeTop && currentScroll <= actualBottom - heightSideNav) {
-					$('.table-of-contents').css({
-					  position: 'fixed',
-					  top: '0',
-					  bottom: ''
-					});
-				 } else {
-					if(currentScroll >= actualBottom - heightSideNav) {
-					  $('.table-of-contents').css({
-						 position: 'fixed',
-						 bottom: '0',
-						 top: ''
-					  });
-					} else {
-					  $('.table-of-contents').css({
-						 position: 'static',
-						 bottom: '',
-						 top: ''
-					  });
-					}
-				 }
-			  });
-			}
-			$(document).ready(function () {
-			  fixmetotop();
-			  $(".article").css({ overflow:"auto" });
-			  $('.scrollspy').scrollSpy();
-			});
-		 
-	
-	</script>

@@ -133,6 +133,10 @@ nav .button-collapse {
 	top:60px;
 }
 
+.button-collapse {
+	cursor:pointer;
+}
+
 #backzenbus {
 	top:12px;
 	right:50px
@@ -160,11 +164,26 @@ nav .button-collapse {
 }
 
 @media print {
-	.hide-on-small-only, .printButton, #emptyFooter {
+
+	.content {
+		bottom:auto;
+		 margin: 1.6cm; 
+	}
+	
+	.article { 
+		position:static;
+	}
+	
+	.hide-on-small-only, .printButton, #emptyFooter, .topNav, .sectionNav {
         display:none;
     }
-	 @page { 
-		 margin: 0 1cm;
-		 size:auto;
-	 }
+    
+    .article {
+    	left : 0;
+    }
+    @page {
+      size: auto; 
+      margin: 0
+   }
+	 
 }

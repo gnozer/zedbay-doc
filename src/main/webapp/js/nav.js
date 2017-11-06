@@ -30,6 +30,37 @@ function nav_toggle(e, id1, id2, lang, back) {
 	
 }
 
+function fixmetotop() {
+	var fixmeTop = $('.table-of-contents').offset().top;
+	$(".article").scroll(function() {
+		var currentScroll = $(window).scrollTop(),
+			currentScroll = currentScroll + 15,
+			actualBottom = $('#bodybox').offset().top + $('#bodybox').outerHeight(true),
+			heightSideNav = $('.table-of-contents').outerHeight(true);
+		if (currentScroll >= fixmeTop && currentScroll <= actualBottom - heightSideNav) {
+			$('.table-of-contents').css({
+				position: 'fixed',
+				top: '65px',
+				bottom: ''
+			});
+		} else {
+			if(currentScroll >= actualBottom - heightSideNav) {
+				$('.table-of-contents').css({
+					position: 'fixed',
+					bottom: '',
+					top: '65px'
+				});
+			} else {
+				$('.table-of-contents').css({
+					position: 'static',
+					bottom: '',
+					top: ''
+				});
+			}
+		}
+	});
+}
+
 
 $( document ).ready(function() {
 	$(".button-collapse").sideNav();
@@ -49,63 +80,135 @@ $( document ).ready(function() {
 	});
 	
 	// Supervision Navigation
-	$('#menuSupervision').click(function(e) {
-		nav_toggle(e, 'supervision', 'live', currentLang, false);
+	$('.menuSupervision').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'live', currentLang, false);
+		});
 	});
 	
-	$('#supervisionLive').click(function(e) {
-		nav_toggle(e, 'supervision', 'live', currentLang, false);
+	$('.supervisionLive').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'live', currentLang, false);
+		});
 	});
 	
-	$('#supervisionHistory').click(function(e) {
-		nav_toggle(e, 'supervision', 'history', currentLang, false);
+	$('.supervisionHistory').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'history', currentLang, false);
+		});
 	});
 	
-	$('#supervisionDailystoptimes').click(function(e) {
-		nav_toggle(e, 'supervision', 'dailystoptimes', currentLang, false);
+	$('.supervisionDailystoptimes').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'dailystoptimes', currentLang, false);
+		});
 	});
 	
-	$('#supervisionProviders').click(function(e) {
-		nav_toggle(e, 'supervision', 'providers', currentLang, false);
+	$('.supervisionProviders').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'providers', currentLang, false);
+		});
 	});
 
 	// Driver Navigation
-	$('#menuDriver').click(function(e) {
-		nav_toggle(e, 'driver', 'installation', currentLang, false);
+	$('.menuDriver').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'driver', 'installation', currentLang, false);
+		});
 	});
 
-	$('#driverInstallation').click(function(e) {
-		nav_toggle(e, 'driver', 'installation', currentLang, false);
+	$('.driverInstallation').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'driver', 'installation', currentLang, false);
+		});
 	});
 
-	$('#driverConfiguration').click(function(e) {
-		nav_toggle(e, 'driver', 'configuration', currentLang, false);
+	$('.driverConfiguration').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'driver', 'configuration', currentLang, false);
+		});
 	});
 
-	$('#driverFaq').click(function(e) {
-		nav_toggle(e, 'driver', 'faq', currentLang, false);
+	$('.driverFaq').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'driver', 'faq', currentLang, false);
+		});
 	});
 
-	$('#driverTutorial').click(function(e) {
-		nav_toggle(e, 'driver', 'tutorial', currentLang, false);
+	$('.driverTutorial').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'driver', 'tutorial', currentLang, false);
+		});
 	});
 
 	// Traveller Navigation
-	$('#menuTraveller').click(function(e) {
-		nav_toggle(e, 'traveller', 'android', currentLang, false);
+	$('.menuTraveller').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'traveller', 'android', currentLang, false);
+		});
 	});
 	
-	$('#travellerAndroid').click(function(e) {
-		nav_toggle(e, 'traveller', 'android', currentLang, false);
+	$('.travellerAndroid').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'traveller', 'android', currentLang, false);
+		});
 	});
 	
-	$('#travellerIos').click(function(e) {
-		nav_toggle(e, 'traveller', 'ios', currentLang, false);
+	$('.travellerIos').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'traveller', 'ios', currentLang, false);
+		});
 	});
 	
-	$('#travellerWeb').click(function(e) {
-		nav_toggle(e, 'traveller', 'web', currentLang, false);
+	$('.travellerWeb').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'traveller', 'web', currentLang, false);
+		});
+	});
+	
+	fixmetotop();
+	$(".article").css({ overflow:"auto" });
+	//$('.scrollspy').scrollSpy();
+	
+	var categories = [];
+	var id = false;
+	var $navbar = $('.table-of-contents');
+	var $navbara = $('a', $navbar);
+	
+	$navbar.each(function() {
+		$navbara.click(function(e){
+			e.preventDefault();
+			$('.article').not('.hidden').animate({
+				scrollTop: $($(this).attr('href')).offset().top - $navbar.height()
+			});
+			hash($(this).attr('href'));
+		});
 	});
 	
 	
+	$navbara.each(function() {
+		categories.push($($(this).attr('href')));
+	});
+	
+	$(".article").each(function() {
+		$(this).scroll(function(e) {
+			var scrollTop = $(this).scrollTop() + ($(".article").height() / 2);
+			for(var i in categories) {
+				var categorie = categories[i];
+				if(scrollTop > categorie.offset().top) {
+					scrolled_id = categorie.attr('id');
+					$navbara.removeClass('active');
+					$('a[href="#' + scrolled_id + '"]', $navbar).addClass('active');
+				}
+			}
+		});
+	});
+
+	hash = function(h) {
+		if (history.pushState) {
+			history.pushState(null, null, h);
+		}else{
+			location.hash = h;
+		}
+	}
 });
