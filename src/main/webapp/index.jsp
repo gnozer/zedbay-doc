@@ -6,6 +6,8 @@
 <html lang="<%= lang.toString() %>">
 	 <head>
 		  <meta charset="utf-8">
+		  <meta name="mobile-web-app-capable" content="yes">
+		  <meta name="apple-mobile-web-app-capable" content="yes">
 		  <title>Zenbus Doc' : Prototype</title>
 		  
 		  <!-- Compiled and minified CSS -->

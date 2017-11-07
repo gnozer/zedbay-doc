@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <nav class="sectionNav hide-on-med-and-down">
-	<h2 class="sideTitle">Zenbus Supervision</h2>
 	<ul id="nav-mobile" class="side-nav fixed">
 		<li class="item-supervision-live"><a class="supervisionLive">1. Live</a></li>
 		<li class="item-supervision-history"><a class="supervisionHistory">2. Historique</a></li>
@@ -11,7 +10,7 @@
 </nav>
 <article id="live" class="article">
 	<div class="row">
-		<div class="section col s12 m9 l10" id="bodybox">
+		<div class="section col s12 m12 l10" id="bodybox">
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"
@@ -65,7 +64,7 @@
 </article>
 <article id="history" class="article">
 	<div class="row">
-		<div class="section col s12 m9 l10" id="bodybox">
+		<div class="section col s12 m12 l10" id="bodybox">
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"
@@ -119,7 +118,7 @@
 </article>
 <article id="dailystoptimes" class="article">
 	<div class="row">
-		<div class="section col s12 m9 l10" id="bodybox">
+		<div class="section col s12 m12 l10" id="bodybox">
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"
@@ -173,7 +172,7 @@
 </article>
 <article id="providers" class="article">
 	<div class="row">
-		<div class="section col s12 m9 l10" id="bodybox">
+		<div class="section col s12 m12 l10" id="bodybox">
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"

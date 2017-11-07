@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <nav class="sectionNav hide-on-med-and-down">
-	<h2 class="sideTitle">Zenbus Voyageur</h2>
 	<ul id="nav-mobile" class="side-nav fixed">
 		<li class="item-traveller-android"><a class="travellerAndroid">1. Android</a></li>
 		<li class="item-traveller-ios"><a class="travellerIos">2. iOS</a></li>
@@ -11,7 +10,7 @@
 
 <article id="android" class="article">
 	<div class="row config">
-		<div class="section col s12 m9 l10" id="bodybox">
+		<div class="section col s12 m12 l10" id="bodybox">
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"
@@ -65,7 +64,7 @@
 </article>
 <article id="ios" class="article">
 	<div class="row">
-		<div class="section col s12 m9 l10" id="bodybox">
+		<div class="section col s12 m12 l10" id="bodybox">
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"
@@ -119,7 +118,7 @@
 </article>
 <article id="web" class="article">
 	<div class="row">
-		<div class="section col s12 m9 l10" id="bodybox">
+		<div class="section col s12 m12 l10" id="bodybox">
 
 			<a
 				class="btn-floating btn-large waves-effect waves-light printButton"

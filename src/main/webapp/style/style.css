@@ -2,6 +2,7 @@ html {
 	line-height: 1.8;
 	font-family: 'Lato', sans-serif;
 	color:#142840;
+	font-size:15px;
 }
 
 h1, h2, h3, h4 {
@@ -9,7 +10,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size:24px;
+	font-size:160%;
 }
 
 h1:after {
@@ -23,19 +24,19 @@ h1:after {
 }
 
 h2 {
-	font-size:22px;
+	font-size:146%;
 }
 
 h3 {
-	font-size:20px;
+	font-size:133%;
 }
 
 h4 {
-	font-size:18px;
+	font-size:120%;
 }
 
 h5 {
-	font-size:16px;
+	font-size:106%;
 }
 
 p {
@@ -109,7 +110,8 @@ nav .button-collapse {
 	left:270px;
 	bottom:0px;
 	right:0px;
-	overflow-y: hidden;
+	overflow:auto;
+	-webkit-overflow-scrolling :touch;
 }
 
 #topmenu li:first-child {
@@ -157,17 +159,62 @@ nav .button-collapse {
 	height:150px;
 }
 
+.side-nav li>a {
+	padding:0 16px;
+}
+
 @media screen and (max-width: 992px) {
+	html {
+		font-size:50px;
+	}
+	
+	nav i.material-icons {
+		font-size:70px;
+	}
+	
 	.article {
 		left:0;
 	}
+	
+	.articleNav {
+		display:none;
+	}
+	
+	.side-nav li>a {
+		font-size:40px;
+		height:90px;
+		line-height:90px;
+	}
+	
+	.content {
+		top:160px;
+	}
+	
+	.topNav, a.button-collapse, nav i.material-icons {
+		height:160px !important ;
+		line-height:160px !important;
+	}
+	
+	.printButton {
+		display:none;
+	}
+	
+	.side-nav > li {
+		margin-top:15px;
+	}
+	
+	.collection .collection-item.avatar .title {
+	    font-size: 60px;
+	}
+	
 }
+
 
 @media print {
 
 	.content {
 		bottom:auto;
-		 margin: 1.6cm; 
+		margin: 1.6cm; 
 	}
 	
 	.article { 
