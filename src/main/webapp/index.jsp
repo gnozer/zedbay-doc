@@ -8,12 +8,13 @@
 		  <meta charset="utf-8">
 		  <meta name="mobile-web-app-capable" content="yes">
 		  <meta name="apple-mobile-web-app-capable" content="yes">
+		  <link rel="icon" type="image/png" href="/images/logo_zendoc.png" />
 		  <title>Zenbus Doc' : Prototype</title>
 		  
 		  <!-- Compiled and minified CSS -->
 		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 		  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 		  <link rel="stylesheet" href="/style/style.css">
 		  
 		  <!-- Compiled and minified JavaScript -->
@@ -26,8 +27,9 @@
 	 	<header>
 	 		<nav class="topNav">
 			  <div class="nav-wrapper"> 
-				 <ul class="left hide-on-med-and-down" id="topmenu">
-					<li><img src="/images/logo_zendoc.png" alt="" ></li>
+				 <ul class="left hide-on-med-and-down" id="topMenu">
+					<li><a href="/<%= lang.toString() %>/" class="toHome"><img src="/images/logo_zendoc.png" alt="" ></a></li>
+					<li class="item-zenbus"><a class="menuZenbus">Zenbus</a></li>
 					<li class="item-traveller"><a class="menuTraveller"><%=Resource.META_Desc.get(lang) %></a></li>
 					<li class="item-supervision"><a class="menuSupervision">Zenbus Supervision</a></li>
 					<li class="item-driver"><a class="menuDriver">Zenbus Driver</a></li>
@@ -39,6 +41,12 @@
 	<!--			 <a class="waves-effect waves-light btn right" id="backzenbus" href="http://zenbus.fr" target="_blank">Zenbus.fr</a>-->
 			  </div>
 			  <ul id="slide-out" class="side-nav left">
+			  	<li class="item-zenbus"><a class="menuZenbus">Zenbus</a>
+			  		<ul>
+				    	<li class="item-zenbus-whatisit"><a class="zenbusWhatisit">1. C'est quoi ?</a></li>
+						<li class="item-zenbus-howitworks"><a class="zenbusHowitworks">2. Comment ça marche ?</a></li>
+			        </ul>
+			  	</li>
 			  	<li class="item-traveller"><a class="menuTraveller"><%=Resource.META_Desc.get(lang) %></a>
 			  		<ul>
 				    	<li class="item-traveller-android"><a class="travellerAndroid">1. Android</a></li>
@@ -68,6 +76,9 @@
 			  <a data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 			</nav>
 	 	</header>
+		<section id="zenbus" class="content hidden">
+			<%@ include file="zenbus.jsp" %>
+		</section>
 		<section id="driver" class="content hidden">
 			<%@ include file="driver.jsp" %>
 		</section>
@@ -76,6 +87,9 @@
 		</section>
 		<section id="traveller" class="content hidden">
 			<%@ include file="traveller.jsp" %>
+		</section>
+		<section id="notFound" class="content hidden">
+			<%@ include file="notFound.jsp" %>
 		</section>
 		
 		<!-- Zendoc Script -->

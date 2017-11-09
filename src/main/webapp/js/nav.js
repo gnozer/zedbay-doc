@@ -1,3 +1,13 @@
+/**
+ * Handle the navigation & the URL
+ * 
+ * @param e event
+ * @param id1 id of the section (Driver, Traveller or Supervision)
+ * @param id2 id of the article of the section
+ * @param lang Lang
+ * @param back true if pressing back button
+ * @returns the correct page to display
+ */
 function nav_toggle(e, id1, id2, lang, back) {
 	if(e != null) {
 		e.preventDefault();
@@ -6,22 +16,35 @@ function nav_toggle(e, id1, id2, lang, back) {
 	// SHOW THE RIGHT SECTION
 	var $section = $("#"+id1);
 	$(".content").addClass("hidden");
-	$section.removeClass("hidden");
+	if ($section.length ) {
+		$section.removeClass("hidden");
+		
+		// PUT THE CLASS ACTIVE ON THE SECTION MENU
+		$('.topNav li').removeClass("active");
+		var $itemSection = $(".item-"+id1);
+		$itemSection.addClass("active");
+	} else {
+		$('#notFound').removeClass("hidden");
+		$('.topNav li').removeClass("active");
+	}
 	
-	// PUT THE CLASS ACTIVE ON THE SECTION MENU
-	$('.topNav li').removeClass("active");
-	var $itemSection = $(".item-"+id1);
-	$itemSection.addClass("active");
+	
 	
 	// SHOW THE RIGHT ARTICLE
 	var $article = $("#"+id2);
-	$(".article").addClass("hidden");
-	$article.removeClass("hidden");
-
-	// PUT THE CLASS ACTIVE ON THE ARTICLE MENU
-	$('.sectionNav li').removeClass("active");
-	var $itemArticle = $(".item-"+id1+"-"+id2); 
-	$itemArticle.addClass("active");
+	if ($article.length ) {
+		$(".article").addClass("hidden");
+		$article.removeClass("hidden");
+	
+		// PUT THE CLASS ACTIVE ON THE ARTICLE MENU
+		$('.sectionNav li').removeClass("active");
+		var $itemArticle = $(".item-"+id1+"-"+id2); 
+		$itemArticle.addClass("active");
+	} else {
+		$(".content").addClass("hidden");
+		$('#notFound').removeClass("hidden");
+		$('.topNav li').removeClass("active");
+	}
 	
 	// PUSH THE URL
 	if(!back) {
@@ -31,6 +54,11 @@ function nav_toggle(e, id1, id2, lang, back) {
 	
 }
 
+/**
+ * Put the article menu fixed
+ * 
+ * @returns nothing
+ */
 function fixmetotop() {
 	var fixmeTop = $('.table-of-contents').offset().top;
 	$(".article").scroll(function() {
@@ -62,14 +90,17 @@ function fixmetotop() {
 	});
 }
 
-
+/**
+ * Do a scrollSpy for the article menu
+ * 
+ * @param article the id of the displayed article
+ * @returns nothing
+ */
 function scrollSpy(article) {
 	var categories = [];
 	var id = false;
 	var $navbar = $('#' + article + ' .table-of-contents');
 	var $navbara = $('a', $navbar);
-	
-	console.log($navbar);
 	
 	$navbara.click(function(e){
 		e.preventDefault();
@@ -110,6 +141,8 @@ function scrollSpy(article) {
 
 
 $( document ).ready(function() {
+	
+	// Set the button collapse for small screens
 	$(".button-collapse").sideNav({closeOnClick: true, menuWidth:650, draggable:true});
 
 	fixmetotop();
@@ -119,16 +152,46 @@ $( document ).ready(function() {
 	//TODO Gérer tous les cas
 	if(uriNav[2] != null && uriNav[3] != null && uriNav[2] && uriNav[3]) {
 		nav_toggle(null, uriNav[2], uriNav[3], currentLang, false);
+	} else {
+		$(".content").addClass("hidden");
+		$('#notFound').removeClass("hidden");
+		$('.topNav li').removeClass("active");
 	}
 	
+	// Listen if back button is clicked
 	window.addEventListener("popstate", function(e) {
 		if(e.state['id1'] != null || e.state['id2']) {
 			nav_toggle(null, e.state['id1'], e.state['id2'], e.state['lang'], true);
 		}
 	});
 	
+	// Zenbus Navigation
+	$('.menuZenbus').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'zenbus', 'whatisit', currentLang, false);
+		});
+	});
+	
+	$('.zenbusWhatisit').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'zenbus', 'whatisit', currentLang, false);
+		});
+	});
+	
+	$('.zenbusHowitworks').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'zenbus', 'howitworks', currentLang, false);
+		});
+	});
+	
 	// Supervision Navigation
 	$('.menuSupervision').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'introduction', currentLang, false);
+		});
+	});
+	
+	$('.supervisionIntroduction').each(function() {
 		$(this).click(function(e) {
 			nav_toggle(e, 'supervision', 'live', currentLang, false);
 		});

@@ -1,8 +1,9 @@
 html {
 	line-height: 1.8;
 	font-family: 'Lato', sans-serif;
-	color:#142840;
 	font-size:15px;
+	color:#142840;
+	font-weight:300;
 }
 
 h1, h2, h3, h4 {
@@ -44,9 +45,9 @@ p {
 }
 
 blockquote {
-	background-color:rgba(255, 234, 235, 0.76);
 	padding-top:5px;
 	padding-bottom:5px;
+	background-color:rgba(255, 234, 235, 0.76);
 }
 
 nav .button-collapse {
@@ -54,13 +55,69 @@ nav .button-collapse {
 	top:0;
 }
 
-.collection .collection-item.avatar {
-	min-height:0;
+#topMenu li:first-child img {
+	width:65px;
+}
+
+#notFound {
+	padding:20px 50px;
+	background-color: #f5f6f7;
+	overflow:auto;
+}
+
+#notFound .homeLinks {
+	margin-top:50px;
+}
+
+#notFound a.externLink {
+	text-decoration:underline
+}
+
+#notFound a {
+	color: rgb(20,40,64);
+}
+
+#notFound a:hover {
+	background-color: #f5f6f7;
+	color: #26a69a;
+}
+
+#notFound #backgroundLogo{
+	position:absolute;
+	height:100%;
+	z-index:0;
+	left:-14%;
+	opacity: 0.1;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.toHome {
+	-webkit-transition: unset;
+	transition:unset;
+	padding:0;
+	
+}
+
+.toHome:hover {
+	background:none;
 }
 
 .imp, #slide-out > li > a {
 	font-weight: bold;
 	color:#00bfa5;
+}
+
+.side-nav li ul li {
+	margin-left:10px
+}
+
+.side-nav li>a {
+	padding:0 16px;
+}
+
+.collection .collection-item.avatar {
+	min-height:0;
 }
 
 .imp2 {
@@ -73,6 +130,7 @@ nav .button-collapse {
 
 .topNav {
 	background-color:#00bfa5;
+	font-weight:400;
 }
 
 .articleNav, .sectionNav {
@@ -89,10 +147,6 @@ nav .button-collapse {
 
 .side-nav {
 	width:260px;
-}
-
-.side-nav li ul li {
-	margin-left:10px
 }
 
 .content {
@@ -114,7 +168,7 @@ nav .button-collapse {
 	-webkit-overflow-scrolling :touch;
 }
 
-#topmenu li:first-child {
+#topMenu li:first-child {
 	height: 65px;
 	width: 100px;
 	margin-right: 60px;
@@ -123,35 +177,18 @@ nav .button-collapse {
 	background: white;
 }
 
-#topmenu li:first-child img {
-	width:65px;
-}
-
 .hidden {
 	display:none;
-}
-
-#toc {
-	top:60px;
 }
 
 .button-collapse {
 	cursor:pointer;
 }
 
-#backzenbus {
-	top:12px;
-	right:50px
-}
-
-.sideTitle {
-	padding:15px;
-}
-
 .printButton {
 	position:relative;
-	top:20px;
 	float:right;
+	top:20px;
 }
 
 #emptyFooter {
@@ -159,10 +196,10 @@ nav .button-collapse {
 	height:150px;
 }
 
-.side-nav li>a {
-	padding:0 16px;
-}
 
+/* -------------  Media Queries */
+
+/* Small screens (below 992px) */
 @media screen and (max-width: 992px) {
 	html {
 		font-size:50px;
@@ -170,6 +207,16 @@ nav .button-collapse {
 	
 	nav i.material-icons {
 		font-size:70px;
+	}
+	
+	.side-nav li>a {
+		font-size:40px;
+		height:90px;
+		line-height:90px;
+	}
+	
+	.side-nav > li {
+		margin-top:15px;
 	}
 	
 	.article {
@@ -180,12 +227,10 @@ nav .button-collapse {
 		display:none;
 	}
 	
-	.side-nav li>a {
-		font-size:40px;
-		height:90px;
-		line-height:90px;
+	#notFound {
+		padding:0;
 	}
-	
+		
 	.content {
 		top:160px;
 	}
@@ -199,17 +244,13 @@ nav .button-collapse {
 		display:none;
 	}
 	
-	.side-nav > li {
-		margin-top:15px;
-	}
-	
 	.collection .collection-item.avatar .title {
 	    font-size: 60px;
 	}
 	
 }
 
-
+/* Print/PDF display */
 @media print {
 
 	.content {
@@ -228,6 +269,8 @@ nav .button-collapse {
     .article {
     	left : 0;
     }
+    
+    /* Hide the printing title, date etc... */
     @page {
       size: auto; 
       margin: 0
