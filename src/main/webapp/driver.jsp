@@ -263,7 +263,7 @@
 				<h2>Contexte</h2>
 				
 				<p>
-					Le <span class="imp">mode manuel</span> est obligatoire quand le mode automatique ne peut pas fonctionner (ambiguités dûes à des tronçons communs) ET quand l'option Avance/Retard est activée.
+					Le <span class="imp">mode manuel</span> est obligatoire quand le mode automatique ne peut pas fonctionner (ambiguités dûes à des tronçons communs) OU quand l'option Avance/Retard est activée.
 				</p>
 			</div>
 			<div id="driver-manuel-cat2" class="section scrollspy">
@@ -389,7 +389,7 @@
 				<h2>Contexte</h2>
 
 				<p>
-					Le <span class="imp">mode manuel</span> est obligatoire quand le mode automatique ne peut pas fonctionner (ambiguités dûes à des tronçons communs) ET quand l'option Avance/Retard est activée.
+					Le <span class="imp">mode manuel</span> est obligatoire quand le mode automatique ne peut pas fonctionner (ambiguités dûes à des tronçons communs) OU quand l'option Avance/Retard est activée.
 				</p>
 				<blockquote class="gold">
 					L'avance/retard est une option payante, pour plus d'information voir avec votre Chef de projet.
@@ -564,7 +564,7 @@
 				<h2>Contexte</h2>
 
 				<p>
-					Le <span class="imp">mode manuel</span> est obligatoire quand le mode automatique ne peut pas fonctionner (ambiguités dûes à des tronçons communs) ET quand l'option Avance/Retard est activée.
+					Le <span class="imp">mode manuel</span> est obligatoire quand le mode automatique ne peut pas fonctionner (ambiguités dûes à des tronçons communs) OU quand l'option Avance/Retard est activée.
 				</p>
 				<blockquote class="gold">
 					Le comptage est une option payante, pour plus d'information voir avec votre Chef de projet.
