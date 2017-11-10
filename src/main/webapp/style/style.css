@@ -99,6 +99,14 @@ nav .button-collapse {
 	
 }
 
+.article h1 {
+	margin-top:25px
+}
+
+.article h2:first-child {
+	margin-bottom:25px;
+}
+
 .toHome:hover {
 	background:none;
 }
@@ -166,6 +174,20 @@ nav .button-collapse {
 	right:0px;
 	overflow:auto;
 	-webkit-overflow-scrolling :touch;
+}
+
+img.smaller {
+	max-width:216px;
+	margin:auto;
+}
+
+img.greyBorder {
+	border:2px solid #e0e0e0;
+}
+
+blockquote.gold {
+	background-color: #fffde7 ;
+	border-left-color : #FFD700;
 }
 
 #topMenu li:first-child {

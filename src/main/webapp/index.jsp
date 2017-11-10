@@ -64,10 +64,12 @@
 			  	</li>
 			  	<li class="item-driver"><a class="menuDriver">Zenbus Driver</a>
 			  		<ul>
-				    	<li class="item-driver-installation"><a class="driverInstallation">1. Installation</a></li>
-						<li class="item-driver-configuration"><a class="driverConfiguration">2. Configuration</a></li>
-						<li class="item-driver-faq"><a class="driverFaq">3. FAQ</a></li>
-						<li class="item-driver-tutorial"><a class="driverTutorial">4. Tutorial</a></li>
+				    	<li class="item-driver-installation"><a class="driverInstallation">Installation & Mises à jour</a></li>
+						<li class="item-driver-configuration"><a class="driverConfiguration">Configuration</a></li>
+						<li class="item-driver-auto"><a class="driverAuto">Utilisation 1 : Mode auto</a></li>
+						<li class="item-driver-manuel"><a class="driverManuel">Utilisation 2 : Mode manuel</a></li>
+						<li class="item-driver-avanceretard"><a class="driverAvanceretard">Utilisation 3 : Mode manuel & Avance/Retard</a></li>
+						<li class="item-driver-comptage"><a class="driverComptage">Utilisation 4 : Mode manuel & Comptage</a></li>
 			        </ul>
 			  	</li>
 			    <li><a href="#!">Cas d'utilisations</a></li>

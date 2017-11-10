@@ -36,10 +36,12 @@
 		<div class="homeList col l3 m12 s12">
 			<h2>Zenbus Driver</h2>
 			<div class="collection">
-				<a href="/<%= lang2.toString() %>/driver/installation" class="collection-item">Installation</a>
+				<a href="/<%= lang2.toString() %>/driver/installation" class="collection-item">Installation & Mises à jour</a>
 				<a href="/<%= lang2.toString() %>/driver/configuration" class="collection-item">Configuration</a>
-				<a href="/<%= lang2.toString() %>/driver/faq" class="collection-item">FAQ</a>
-				<a href="/<%= lang2.toString() %>/driver/tutorial" class="collection-item">Tutoriel</a>
+				<a href="/<%= lang2.toString() %>/driver/auto" class="collection-item">Utilisation 1 : Mode auto</a>
+				<a href="/<%= lang2.toString() %>/driver/manuel" class="collection-item">Utilisation 2 : Mode manuel</a>
+				<a href="/<%= lang2.toString() %>/driver/avanceretard" class="collection-item">Utilisation 3 : Mode manuel & Avance/Retard</a>
+				<a href="/<%= lang2.toString() %>/driver/comptage" class="collection-item">Utilisation 4 : Mode manuel & Comptage</a>
 			</div>
 		</div>
 	</div>

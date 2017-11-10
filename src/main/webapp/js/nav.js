@@ -240,15 +240,27 @@ $( document ).ready(function() {
 		});
 	});
 
-	$('.driverFaq').each(function() {
+	$('.driverAuto').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'driver', 'faq', currentLang, false);
+			nav_toggle(e, 'driver', 'auto', currentLang, false);
 		});
 	});
 
-	$('.driverTutorial').each(function() {
+	$('.driverManuel').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'driver', 'tutorial', currentLang, false);
+			nav_toggle(e, 'driver', 'manuel', currentLang, false);
+		});
+	});
+
+	$('.driverAvanceretard').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'driver', 'avanceretard', currentLang, false);
+		});
+	});
+
+	$('.driverComptage').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'driver', 'comptage', currentLang, false);
 		});
 	});
 
