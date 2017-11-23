@@ -31,7 +31,7 @@ function nav_toggle(e, id1, id2, lang, back) {
 	
 	
 	// SHOW THE RIGHT ARTICLE
-	var $article = $("#"+id2);
+	var $article = $("#"+id1+" #"+id2);
 	if ($article.length ) {
 		$(".article").addClass("hidden");
 		$article.removeClass("hidden");
@@ -99,12 +99,12 @@ function fixmetotop() {
 function scrollSpy(article) {
 	var categories = [];
 	var id = false;
-	var $navbar = $('#' + article + ' .table-of-contents');
+	var $navbar = $('article:not(.hidden) .table-of-contents');
 	var $navbara = $('a', $navbar);
 	
 	$navbara.click(function(e){
 		e.preventDefault();
-		$('#'+article).animate({
+		$('article:not(.hidden)').animate({
 			scrollTop: $($(this).attr('href')).offset().top-65
 		});
 		hash($(this).attr('href'));
@@ -115,7 +115,7 @@ function scrollSpy(article) {
 		categories.push($($(this).attr('href')));
 	});
 	
-	$('#'+article).scroll(function(e) {
+	$('article:not(.hidden)').scroll(function(e) {
 		var scrollTop = $(this).scrollTop() + (($(window).height() / 2) -65);
 		for(var i in categories) {
 			var categorie = categories[i];
@@ -193,7 +193,7 @@ $( document ).ready(function() {
 	
 	$('.supervisionIntroduction').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'supervision', 'live', currentLang, false);
+			nav_toggle(e, 'supervision', 'introduction', currentLang, false);
 		});
 	});
 	
@@ -209,22 +209,58 @@ $( document ).ready(function() {
 		});
 	});
 	
+	$('.supervisionProviders').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'providers', currentLang, false);
+		});
+	});
+	
 	$('.supervisionDailystoptimes').each(function() {
 		$(this).click(function(e) {
 			nav_toggle(e, 'supervision', 'dailystoptimes', currentLang, false);
 		});
 	});
 	
-	$('.supervisionProviders').each(function() {
+	$('.supervisionLines').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'supervision', 'providers', currentLang, false);
+			nav_toggle(e, 'supervision', 'lines', currentLang, false);
+		});
+	});
+	
+	$('.supervisionMessages').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'messages', currentLang, false);
+		});
+	});
+	
+	$('.supervisionTimeline').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'timeline', currentLang, false);
+		});
+	});
+	
+	$('.supervisionCount').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'count', currentLang, false);
+		});
+	});
+	
+	$('.supervisionTad').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'supervision', 'tad', currentLang, false);
 		});
 	});
 
 	// Driver Navigation
 	$('.menuDriver').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'driver', 'installation', currentLang, false);
+			nav_toggle(e, 'driver', 'introduction', currentLang, false);
+		});
+	});
+
+	$('.driverIntroduction').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'driver', 'introduction', currentLang, false);
 		});
 	});
 
@@ -252,40 +288,46 @@ $( document ).ready(function() {
 		});
 	});
 
-	$('.driverAvanceretard').each(function() {
+	$('.driverPunctuality').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'driver', 'avanceretard', currentLang, false);
+			nav_toggle(e, 'driver', 'punctuality', currentLang, false);
 		});
 	});
 
-	$('.driverComptage').each(function() {
+	$('.driverCount').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'driver', 'comptage', currentLang, false);
+			nav_toggle(e, 'driver', 'count', currentLang, false);
 		});
 	});
 
 	// Traveller Navigation
 	$('.menuTraveller').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'traveller', 'android', currentLang, false);
+			nav_toggle(e, 'traveller', 'introduction', currentLang, false);
 		});
 	});
 	
-	$('.travellerAndroid').each(function() {
+	$('.travellerIntroduction').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'traveller', 'android', currentLang, false);
+			nav_toggle(e, 'traveller', 'introduction', currentLang, false);
 		});
 	});
 	
-	$('.travellerIos').each(function() {
+	$('.travellerMobile').each(function() {
 		$(this).click(function(e) {
-			nav_toggle(e, 'traveller', 'ios', currentLang, false);
+			nav_toggle(e, 'traveller', 'mobile', currentLang, false);
 		});
 	});
 	
 	$('.travellerWeb').each(function() {
 		$(this).click(function(e) {
 			nav_toggle(e, 'traveller', 'web', currentLang, false);
+		});
+	});
+	
+	$('.travellerTad').each(function() {
+		$(this).click(function(e) {
+			nav_toggle(e, 'traveller', 'tad', currentLang, false);
 		});
 	});
 });

@@ -23,7 +23,7 @@ public enum Lang {
 		try{
 			return valueOf(lng.trim().toUpperCase());
 		}catch(Exception e){
-			return getDefaultLang();
+			return null;
 		}
 		
 	}

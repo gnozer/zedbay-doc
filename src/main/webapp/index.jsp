@@ -9,7 +9,7 @@
 		  <meta name="mobile-web-app-capable" content="yes">
 		  <meta name="apple-mobile-web-app-capable" content="yes">
 		  <link rel="icon" type="image/png" href="/images/logo_zendoc.png" />
-		  <title>Zenbus Doc' : Prototype</title>
+		  <title>Zenbus Doc'</title>
 		  
 		  <!-- Compiled and minified CSS -->
 		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -49,27 +49,35 @@
 			  	</li>
 			  	<li class="item-traveller"><a class="menuTraveller"><%=Resource.META_Desc.get(lang) %></a>
 			  		<ul>
-				    	<li class="item-traveller-android"><a class="travellerAndroid">1. Android</a></li>
-						<li class="item-traveller-ios"><a class="travellerIos">2. iOS</a></li>
-						<li class="item-traveller-web"><a class="travellerWeb">3. Web</a></li>
+				    	<li class="item-traveller-introduction"><a class="travellerIntroduction">Introduction</a></li>
+				    	<li class="item-traveller-mobile"><a class="travellerMobile">Mobile/Tablette</a></li>
+						<li class="item-traveller-web"><a class="travellerWeb">Web</a></li>
+						<li class="item-traveller-tad"><a class="travellerTad">TAD</a></li>
 			        </ul>
 			  	</li>
 			  	<li class="item-supervision"><a class="menuSupervision">Zenbus Supervision</a>
 			  		<ul>
-				    	<li class="item-supervision-live"><a class="supervisionLive">1. Live</a></li>
-						<li class="item-supervision-history"><a class="supervisionHistory">2. Historique</a></li>
-						<li class="item-supervision-dailystoptimes"><a class="supervisionDailystoptimes">3. Temps de passage</a></li>
-						<li class="item-supervision-providers"><a class="supervisionProviders">4. Providers</a></li>
+				    	<li class="item-supervision-introduction"><a class="supervisionIntroduction">Introduction</a></li>
+				    	<li class="item-supervision-live"><a class="supervisionLive">Live</a></li>
+						<li class="item-supervision-history"><a class="supervisionHistory">Historique</a></li>
+						<li class="item-supervision-providers"><a class="supervisionProviders">Terminaux</a></li>
+						<li class="item-supervision-dailystoptimes"><a class="supervisionDailystoptimes">Temps de passage</a></li>
+						<li class="item-supervision-lines"><a class="supervisionLines">Lignes</a></li>
+						<li class="item-supervision-messages"><a class="supervisionMessages">Messagerie</a></li>
+						<li class="item-supervision-timeline"><a class="supervisionTimeline">Option : Timeline</a></li>
+						<li class="item-supervision-count"><a class="supervisionCount">Option : Comptage</a></li>
+						<li class="item-supervision-tad"><a class="supervisionTad">Option : TAD</a></li>
 			        </ul>
 			  	</li>
 			  	<li class="item-driver"><a class="menuDriver">Zenbus Driver</a>
 			  		<ul>
+				    	<li class="item-driver-introduction"><a class="driverIntroduction">Introduction</a></li>
 				    	<li class="item-driver-installation"><a class="driverInstallation">Installation & Mises à jour</a></li>
 						<li class="item-driver-configuration"><a class="driverConfiguration">Configuration</a></li>
-						<li class="item-driver-auto"><a class="driverAuto">Utilisation 1 : Mode auto</a></li>
-						<li class="item-driver-manuel"><a class="driverManuel">Utilisation 2 : Mode manuel</a></li>
-						<li class="item-driver-avanceretard"><a class="driverAvanceretard">Utilisation 3 : Mode manuel & Avance/Retard</a></li>
-						<li class="item-driver-comptage"><a class="driverComptage">Utilisation 4 : Mode manuel & Comptage</a></li>
+						<li class="item-driver-auto"><a class="driverAuto">Mode auto</a></li>
+						<li class="item-driver-manuel"><a class="driverManuel">Mode manuel</a></li>
+						<li class="item-driver-punctuality"><a class="driverPunctuality">Avance/Retard</a></li>
+						<li class="item-driver-count"><a class="driverCount">Comptage</a></li>
 			        </ul>
 			  	</li>
 			    <li><a href="#!">Cas d'utilisations</a></li>
@@ -79,16 +87,16 @@
 			</nav>
 	 	</header>
 		<section id="zenbus" class="content hidden">
-			<%@ include file="zenbus.jsp" %>
+			<%@ include file="/zenbus/index.jsp" %>
 		</section>
 		<section id="driver" class="content hidden">
-			<%@ include file="driver.jsp" %>
+			<%@ include file="/driver/index.jsp" %>
 		</section>
 		<section id="supervision" class="content hidden">
-			<%@ include file="supervision.jsp" %>
+			<%@ include file="/supervision/index.jsp" %>
 		</section>
 		<section id="traveller" class="content hidden">
-			<%@ include file="traveller.jsp" %>
+			<%@ include file="/traveller/index.jsp" %>
 		</section>
 		<section id="notFound" class="content hidden">
 			<%@ include file="notFound.jsp" %>

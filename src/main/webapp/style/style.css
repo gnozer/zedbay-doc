@@ -66,7 +66,7 @@ nav .button-collapse {
 }
 
 #notFound .homeLinks {
-	margin-top:50px;
+	margin-top:10px;
 }
 
 #notFound a.externLink {
@@ -124,6 +124,14 @@ nav .button-collapse {
 	padding:0 16px;
 }
 
+.side-nav li ul li a {
+	text-decoration: none; 
+    text-overflow: ellipsis; 
+    display: block; 
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
 .collection .collection-item.avatar {
 	min-height:0;
 }
@@ -176,6 +184,38 @@ nav .button-collapse {
 	-webkit-overflow-scrolling :touch;
 }
 
+.article-view-wrapper {
+	padding-top:50px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:rgba(245,246,247,1);
+}
+
+.article-view {
+	background: #fff;
+	padding: 30px;
+	max-width:990px;
+	width:100%;
+	margin: auto;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+
+.article-view > .row .col {
+	float:none;
+}
+
+.article-view .section {
+  	max-width:642px;
+	width:100% !important;
+	margin: 0 auto;
+}
+
+.article-view .articleNav {
+	display:none;
+}
+
 img.smaller {
 	max-width:216px;
 	margin:auto;
@@ -184,6 +224,41 @@ img.smaller {
 img.greyBorder {
 	border:2px solid #e0e0e0;
 }
+
+.text-gold {
+	color:#ffd600
+}
+
+.collection .option-gold {
+	border-left :3px solid #FFD700;
+}
+
+.number-icon {
+	position:absolute;
+	width: 42px;
+	height: 42px;
+	left:15px;
+	display: inline-block;
+	text-align:center;
+	font-size:18px;
+	line-height:42px;
+	color:#00bfa5 ;
+	font-weight:bold;
+}
+
+.number-icon-white {
+	position:absolute;
+	width: 42px;
+	height: 42px;
+	left:15px;
+	display: inline-block;
+	text-align:center;
+	font-size:18px;
+	line-height:42px;
+	color:#fff; ;
+	font-weight:bold;
+}
+
 
 blockquote.gold {
 	background-color: #fffde7 ;
@@ -216,6 +291,104 @@ blockquote.gold {
 #emptyFooter {
 	display: block;
 	height:150px;
+}
+
+.collection .nopadding {
+	padding:0;
+}
+
+.icon-live {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -60px;
+	vertical-align:middle;
+}
+
+.icon-history {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -120px;
+	vertical-align:middle;
+}
+
+.icon-providers {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -300px;
+	vertical-align:middle;
+}
+
+.icon-dailystoptimes {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -240px;
+	vertical-align:middle;
+}
+
+.icon-lines {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -180px;
+	vertical-align:middle;
+}
+
+.icon-messages {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -360px;
+	vertical-align:middle;
+}
+
+.icon-timeline {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -120px;
+	vertical-align:middle;
+}
+
+.icon-count {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -480px;
+	vertical-align:middle;
+}
+
+.icon-drt {
+	background-image: url(../images/supervision_icons.png);
+	display:inline-block;
+	width:60px;
+	height:60px;
+	background-size:120px 540px;
+	background-position:60px -60px;
+	vertical-align:middle;
+}
+
+.badge-store {
+	height:40px;
 }
 
 

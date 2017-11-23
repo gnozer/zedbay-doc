@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Filter to detect or define language
+ * 
+ * Pattern 1 : /<LANG>/<SECTION>/<ARTICLE>/
+ * Pattern 2 : /article/<LANG>/<SECTION>/<ARTICLE>/
+ * 
  * @author boris
  *
  */
@@ -40,7 +44,12 @@ public class DocFilter implements Filter {
 	
 	public Lang getLanguageFromURI(String uri) {
 		if(uri != null && !uri.isEmpty() && uri.split("/").length >=1) {
-			return Lang.getLang(uri.split("/")[1]);
+			if(Lang.getLang(uri.split("/")[1]) != null) {
+				return Lang.getLang(uri.split("/")[1]);
+			} else if(Lang.getLang(uri.split("/")[2]) != null) {
+				return Lang.getLang(uri.split("/")[2]);
+			}
+			
 		}
 		
 		return  Lang.getDefaultLang();
