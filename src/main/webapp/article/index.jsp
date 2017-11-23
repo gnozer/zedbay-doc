@@ -23,7 +23,7 @@
 
 		  
     </head>
-	 <body>
+	 <body class="body-article-view">
 	 	<div class="article-view-wrapper">
 		 	<!-- ARTICLES FROM DRIVER -->
 			<article id="driver-introduction" class="article-view">
