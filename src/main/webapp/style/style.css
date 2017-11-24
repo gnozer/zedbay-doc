@@ -201,23 +201,23 @@ nav .button-collapse {
 
 .article-view {
 	background: #fff;
-	padding: 30px;
-	max-width:990px;
-	width:100%;
+	width:90%;
+	padding:34px 20px;
+	/*max-width:990px;*/
 	margin: auto;
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
 	-moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
 	box-shadow: 0 0 10px rgba(0,0,0,.2);
 }
 
-.article-view > .row .col {
-	float:none;
+.article-view .row {
+  /*	max-width:700px;*/
+	width:100% !important;
+	margin: 0 auto;
 }
 
 .article-view .section {
-  	max-width:642px;
 	width:100% !important;
-	margin: 0 auto;
 }
 
 .article-view .articleNav {
