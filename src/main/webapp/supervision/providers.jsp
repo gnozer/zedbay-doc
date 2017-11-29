@@ -5,39 +5,34 @@
 		<a class="btn-floating btn-large waves-effect waves-light printButton"
 			onclick="parent.window.focus();window.print();"><i
 			class="material-icons">local_printshop</i></a>
-		<h1>Terminaux</h1>
+		<h1><%=Resource.NAV_Supervision_article4.get(lang) %></h1>
 		<div id="supervision-providers-cat1" class="section scrollspy">
 			<div class="row valign-wrapper">
 				<div class="col s12 m12 l12">
-					<img src="/images/supervision_providers.png" alt=""
+					<img src="/images/<%= lang.toString() %>/supervision_providers.png" alt=""
 						class="greyBorder responsive-img materialboxed"
-						data-caption="Interface Terminaux de la supervision">
+						data-caption="<%=Resource.SUPERVISION_article4_cat1_img_caption.get(lang) %>">
 				</div>
 			</div>
 			<ul class="collection">
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">1</span> <span
-					class="title">Nouveau terminal</span>
-					<p>Renseignez l'IMEI du terminal à autoriser puis cliquez sur
-						"Ajouter"</p></li>
+					class="title"><%=Resource.SUPERVISION_article4_cat1_collection_span1.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article4_cat1_collection_p1.get(lang) %></p></li>
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">2</span> <span
-					class="title">Liste des smartphones autorisés</span>
-					<p>Vous pouvez consulter la liste des terminaux autorisés et
-						(si besoin) en supprimer en cliquant sur le bouton "Supprimer" de
-						l'item</p></li>
+					class="title"><%=Resource.SUPERVISION_article4_cat1_collection_span2.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article4_cat1_collection_p2.get(lang) %></p></li>
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">3</span> <span
-					class="title">Identifiant (modifiable) des terminaux</span>
-					<p>Pour modifier l'identifiant d'un terminal, cliquez sur son
-						identifiant (colonne "Nom"). La page d'édition s'affichera. Par
-						défaut, l'identifiant d'un terminal est son IMEI</p></li>
+					class="title"><%=Resource.SUPERVISION_article4_cat1_collection_span3.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article4_cat1_collection_p3.get(lang) %></p></li>
 			</ul>
 		</div>
 	</div>
 	<div class="col hide-on-small-only m3 l2 articleNav">
 		<ul class="section table-of-contents">
-			<li><a href="#supervision-providers-cat1">Terminaux</a></li>
+			<li><a href="#supervision-providers-cat1"><%=Resource.NAV_Supervision_article4.get(lang) %></a></li>
 		</ul>
 	</div>
 </div>

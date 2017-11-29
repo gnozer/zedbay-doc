@@ -5,42 +5,38 @@
 		<a class="btn-floating btn-large waves-effect waves-light printButton"
 			onclick="parent.window.focus();window.print();"><i
 			class="material-icons">local_printshop</i></a>
-		<h1>Temps de passages</h1>
+		<h1><%=Resource.NAV_Supervision_article5.get(lang) %></h1>
 		<div id="supervision-dailystoptimes-cat1" class="section scrollspy">
 			<div class="row valign-wrapper">
 				<div class="col s12 m12 l12">
-					<img src="/images/supervision_dailystoptimes.png" alt=""
+					<img src="/images/<%= lang.toString() %>/supervision_dailystoptimes.png" alt=""
 						class="greyBorder responsive-img materialboxed"
-						data-caption="Interface Temps de passage de la supervision">
+						data-caption="<%=Resource.SUPERVISION_article5_cat1_img_caption.get(lang) %>">
 				</div>
 			</div>
 			<ul class="collection">
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">1</span> <span
-					class="title">Date</span>
-					<p>Sélectionnez la date pour laquelle vous souhaitez consulter
-						les temps de passages constatés aux arrêts</p></li>
+					class="title"><%=Resource.SUPERVISION_article5_cat1_collection_span1.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article5_cat1_collection_p1.get(lang) %></p></li>
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">2</span> <span
-					class="title">Liste des lignes</span>
-					<p>Sélectionnez la ligne à consulter</p></li>
+					class="title"><%=Resource.SUPERVISION_article5_cat1_collection_span2.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article5_cat1_collection_p2.get(lang) %></p></li>
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">3</span> <span
-					class="title">Temps de passages constatés</span>
-					<p>Vous pouvez visualiser ici la totalité des trajets
-						effectués. Pour chaque trajet, et par arrêt, vous pouvez consulter
-						l'heure d'arrivée et l'heure de départ.</p></li>
+					class="title"><%=Resource.SUPERVISION_article5_cat1_collection_span3.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article5_cat1_collection_p3.get(lang) %></p></li>
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">4</span> <span
-					class="title">Exports</span>
-					<p>Pour effectuer vos propres analyses, vous pouvez exporter
-						les temps de passages au format Excel ou CSV.</p></li>
+					class="title"><%=Resource.SUPERVISION_article5_cat1_collection_span4.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article5_cat1_collection_p4.get(lang) %></p></li>
 			</ul>
 		</div>
 	</div>
 	<div class="col hide-on-small-only m3 l2 articleNav">
 		<ul class="section table-of-contents">
-			<li><a href="#supervision-dailystoptimes-cat1">Temps de	passages</a></li>
+			<li><a href="#supervision-dailystoptimes-cat1"><%=Resource.NAV_Supervision_article5.get(lang) %></a></li>
 		</ul>
 	</div>
 </div>

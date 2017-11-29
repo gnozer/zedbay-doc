@@ -2,13 +2,13 @@
 <%@page import="com.zenbusdoc.lang.*" %>
 <nav class="sectionNav hide-on-med-and-down">
 	<ul id="nav-mobile" class="side-nav fixed">
-		<li class="item-driver-introduction"><a class="driverIntroduction">Introduction</a></li>
-		<li class="item-driver-installation"><a class="driverInstallation">Installation & Mises à jour</a></li>
-		<li class="item-driver-configuration"><a class="driverConfiguration">Configuration</a></li>
-		<li class="item-driver-auto"><a class="driverAuto">Mode auto</a></li>
-		<li class="item-driver-manuel"><a class="driverManuel">Mode manuel</a></li>
-		<li class="item-driver-punctuality"><a class="driverPunctuality">Mode manuel & Avance/Retard</a></li>
-		<li class="item-driver-count"><a class="driverCount">Mode manuel & Comptage</a></li>
+		<li class="item-driver-introduction"><a class="driverIntroduction"><%=Resource.NAV_Driver_article1.get(lang) %></a></li>
+		<li class="item-driver-installation"><a class="driverInstallation"><%=Resource.NAV_Driver_article2.get(lang) %></a></li>
+		<li class="item-driver-configuration"><a class="driverConfiguration"><%=Resource.NAV_Driver_article3.get(lang) %></a></li>
+		<li class="item-driver-auto"><a class="driverAuto"><%=Resource.NAV_Driver_article4.get(lang) %></a></li>
+		<li class="item-driver-manuel"><a class="driverManuel"><%=Resource.NAV_Driver_article5.get(lang) %></a></li>
+		<li class="item-driver-punctuality"><a class="driverPunctuality"><%=Resource.NAV_Driver_article6.get(lang) %></a></li>
+		<li class="item-driver-count"><a class="driverCount"><%=Resource.NAV_Driver_article7 .get(lang) %></a></li>
 	</ul>
 </nav>
 <article id="introduction" class="article">

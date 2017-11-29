@@ -5,7 +5,7 @@
 		<a class="btn-floating btn-large waves-effect waves-light printButton"
 			onclick="parent.window.focus();window.print();"><i
 			class="material-icons">local_printshop</i></a>
-		<h1>Introduction</h1>
+		<h1><%=Resource.NAV_Driver_article1.get(lang) %></h1>
 		<div id="driver-introduction-cat1" class="section scrollspy">
 
 			<div class="row valign-wrapper">
@@ -15,8 +15,7 @@
 				</div>
 				<div class="col s10 m10 l10">
 					<p>
-						En quelques clics à sa prise de service, les passagers du bus sont
-						mieux informés et plus sereins. <br>
+						<%=Resource.DRIVER_article1_cat1_p1.get(lang) %>
 					</p>
 				</div>
 			</div>
@@ -24,7 +23,7 @@
 	</div>
 	<div class="col hide-on-small-only m3 l2 articleNav">
 		<ul class="section table-of-contents">
-			<li><a href="#driver-introduction-cat1">Introduction</a></li>
+			<li><a href="#driver-introduction-cat1"><%=Resource.NAV_Driver_article1.get(lang) %></a></li>
 		</ul>
 	</div>
 </div>

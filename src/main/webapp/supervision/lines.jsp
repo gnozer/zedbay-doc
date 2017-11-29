@@ -5,33 +5,30 @@
 		<a class="btn-floating btn-large waves-effect waves-light printButton"
 			onclick="parent.window.focus();window.print();"><i
 			class="material-icons">local_printshop</i></a>
-		<h1>Lignes</h1>
+		<h1><%=Resource.NAV_Supervision_article6.get(lang) %></h1>
 		<div id="supervision-lines-cat1" class="section scrollspy">
 			<div class="row valign-wrapper">
 				<div class="col s12 m12 l12">
-					<img src="/images/supervision_lines.png" alt=""
+					<img src="/images/<%= lang.toString() %>/supervision_lines.png" alt=""
 						class="greyBorder responsive-img materialboxed"
-						data-caption="Interface Lignes de la supervision">
+						data-caption="<%=Resource.SUPERVISION_article6_cat1_img_caption.get(lang) %>">
 				</div>
 			</div>
 			<ul class="collection">
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">1</span> <span
-					class="title">Liste des lignes</span>
-					<p>Liste des lignes associées au secteur</p></li>
+					class="title"><%=Resource.SUPERVISION_article6_cat1_collection_span1.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article6_cat1_collection_p1.get(lang) %></p></li>
 				<li class="collection-item avatar"><span
 					class="number-icon circle cyan lighten-5">2</span> <span
-					class="title">Visibilité des lignes</span>
-					<p>Une ligne non-publique n'est pas visible des voyageurs. Elle
-						reste visualisable de la supervision, des véhicules peuvent y être
-						associés, mais la ligne et ses véhicules n'apparaîtront pas sur
-						l'application grand public.</p></li>
+					class="title"><%=Resource.SUPERVISION_article6_cat1_collection_span2.get(lang) %></span>
+					<p><%=Resource.SUPERVISION_article6_cat1_collection_p2.get(lang) %></p></li>
 			</ul>
 		</div>
 	</div>
 	<div class="col hide-on-small-only m3 l2 articleNav">
 		<ul class="section table-of-contents">
-			<li><a href="#supervision-lines-cat1">Lignes</a></li>
+			<li><a href="#supervision-lines-cat1"><%=Resource.NAV_Supervision_article6.get(lang) %></a></li>
 		</ul>
 	</div>
 </div>

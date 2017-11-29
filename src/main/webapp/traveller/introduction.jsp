@@ -5,9 +5,8 @@
 		<a class="btn-floating btn-large waves-effect waves-light printButton"
 			onclick="parent.window.focus();window.print();"><i
 			class="material-icons">local_printshop</i></a>
-		<h1>Introduction</h1>
+		<h1><%=Resource.NAV_Traveller_article1.get(lang) %></h1>
 		<div id="traveller-introduction-cat1" class="section scrollspy">
-
 			<div class="row valign-wrapper">
 				<div class="col s2 m2 l2">
 					<img src="/images/traveller_actor.png" alt=""
@@ -15,9 +14,7 @@
 				</div>
 				<div class="col s10 m10 l10">
 					<p>
-						Les voyageurs voient précisément leurs bus en temps-réel et ont
-						accès à Zenbus sur tout terminal connecté (smarpthone, tablette,
-						ordinateur). <br>
+						<%=Resource.TRAVELLER_article1_cat1_p1.get(lang) %>
 					</p>
 				</div>
 			</div>
@@ -25,7 +22,7 @@
 	</div>
 	<div class="col hide-on-small-only m3 l2 articleNav">
 		<ul class="section table-of-contents">
-			<li><a href="#traveller-introduction-cat1">Introduction</a></li>
+			<li><a href="#traveller-introduction-cat1"><%=Resource.NAV_Traveller_article1.get(lang) %></a></li>
 		</ul>
 	</div>
 </div>
